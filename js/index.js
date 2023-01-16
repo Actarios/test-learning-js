@@ -1,10 +1,14 @@
-function showLang(lang, func) {
-    console.log(`Я все еще учу язык ${lang}`)
-    func()
+function min(a, b) {
+    return (a > b) ? b : a
 }
 
-function done() {
-    console.log('Какой же я красавчик!')
+function pow(x, n) {
+    let res =1
+    for (let i = 1; i <= n; i++) {
+        res *= x
+    }
+
+    return res
 }
 
-showLang('JavaScript', done)
+console.log( pow(1,100) )

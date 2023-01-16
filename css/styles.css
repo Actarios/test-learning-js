@@ -1,0 +1,13 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 0% 50% 50% 0;
+    border-right: 1px solid red;
+    transform: rotate(-25deg);
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}

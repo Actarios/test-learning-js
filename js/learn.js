@@ -1,16 +1,17 @@
-function addFunc() {
-    let increment = 0
-    let func = function() {
-        increment += 1
-        let ret = increment
-        return ret
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+  };
+
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] == 'number') {
+            obj[key] *= 2
+        }
     }
-    return increment
 }
 
-let increm = addFunc()
-let a = increm()
-let b = increm()
-let c = increm()
+multiplyNumeric(menu)
 
-console.log(increm, a, b, c)
+console.log(menu)

@@ -1,43 +1,41 @@
-// let timerId = setTimeout(sayHello, 3000)
-// // clearTimeout(timerId)
+// document.addEventListener('DOMContentLoaded', () => {
 
-// let timerId = setInterval(sayHello, 3000)
-// clearTimeout(timerId)
+//     const box = document.querySelector('.box')
+//     const result = document.querySelector('#result')
+//     const width = box.clientWidth
+//     const height = box.clientHeight
+//     const btn = document.querySelector('button')
 
-// function sayHello() {
-//     console.log('Hello World!')
-// }
+//     result.textContent = `width - ${width}, height = ${height}`
 
-// let timerId = setTimeout(function log() {
-//     console.log('Hello!')
-//     setTimeout(log, 2000)
+//     console.log(box.getBoundingClientRect())
+
+//     console.log(document.documentElement.clientWidth)
+//     console.log(document.documentElement.clientHeight)
+
+//     btn.addEventListener('click', function() {
+//         box.scrollTop = 0
+//     })
+
+//     scrollTo(0, 200)
+
+//     let num = prompt('Введите число', '')
+//     alert(isFinite(num))
+
 // })
 
-let btn = document.querySelector('.btn')
-let elem = document.querySelector('.box')
+// const orderList = document.querySelector('.orders_list')
+// const orderItems = document.querySelectorAll('.orders_list_num')
 
-function myAnimation() {
-    let pos = 0
+// orderItems.forEach(el => {
+//     let close = document.createElement('span')
+//     close.classList.add('close')
+//     el.append(close)
+// })
 
-    let id = setInterval(frame, 10)
-    function frame() {
-        if (pos == 300) {
-            clearInterval()
-        } else {
-            pos++
-            elem.style.top = pos + 'px'
-            elem.style.left = pos + 'px'
-        }
-    }
-}
-
-btn.addEventListener('click', myAnimation)
-
-let btnBlock = document.querySelector('.btn-block'),
-    btns = document.getElementsByTagName('button')
-
-btnBlock.addEventListener('click', function(event) {
-    if (event.target && event.target.matches('button.first')) {
-        console.log('Hello')
-    }
-})
+// orderList.addEventListener('click', function(e) {
+//     if (e.target.matches('.close')) {
+//         let ans = confirm('Удалить выбранную позицию?', '')
+//         if (ans) e.target.parentNode.remove()
+//     }
+// })

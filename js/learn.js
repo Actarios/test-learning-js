@@ -1,41 +1,51 @@
-// document.addEventListener('DOMContentLoaded', () => {
+//  let name = 'Ivan',
+//     age = 30,
+//     mail = 'ex@mail.ru'
 
-//     const box = document.querySelector('.box')
-//     const result = document.querySelector('#result')
-//     const width = box.clientWidth
-//     const height = box.clientHeight
-//     const btn = document.querySelector('button')
+// document.write(`Пользователю ${name} - ${age} лет и его почта ${mail}`)
 
-//     result.textContent = `width - ${width}, height = ${height}`
+// function makeArray() {
+//     var items = []
 
-//     console.log(box.getBoundingClientRect())
-
-//     console.log(document.documentElement.clientWidth)
-//     console.log(document.documentElement.clientHeight)
-
-//     btn.addEventListener('click', function() {
-//         box.scrollTop = 0
-//     })
-
-//     scrollTo(0, 200)
-
-//     let num = prompt('Введите число', '')
-//     alert(isFinite(num))
-
-// })
-
-// const orderList = document.querySelector('.orders_list')
-// const orderItems = document.querySelectorAll('.orders_list_num')
-
-// orderItems.forEach(el => {
-//     let close = document.createElement('span')
-//     close.classList.add('close')
-//     el.append(close)
-// })
-
-// orderList.addEventListener('click', function(e) {
-//     if (e.target.matches('.close')) {
-//         let ans = confirm('Удалить выбранную позицию?', '')
-//         if (ans) e.target.parentNode.remove()
+//     for (var i = 0; i < 10; i++) {
+//         var item = function() {
+//             console.log(i)
+//         }
+//         items.push(item)
 //     }
-// })
+
+//     return items
+// }
+
+// var arr = makeArray()
+
+// arr[1]()
+// arr[3]()
+// arr[7]()
+
+// let fun = () => {
+//     console.log(this)
+// }
+
+// fun()
+
+// let obj = {
+//     number: 5,
+//     sayNumber: function() {
+//         let say = () => {
+//             console.log(this)
+//         }
+//         say()
+//     }
+// }
+
+// obj.sayNumber()
+
+let btn = document.querySelector('button')
+
+btn.addEventListener('click', function() {
+    let show = () => {
+        console.log(this)
+    }
+    show()
+})

@@ -78,4 +78,42 @@ window.addEventListener('DOMContentLoaded', function() {
 
     setClock('timer', deadline)
 
+    // Modal
+
+    let more = document.querySelector('.more'),
+        infoBlock = document.querySelector('.info'),
+        tabsMore = document.querySelectorAll('.description-btn'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close')
+
+    infoBlock.addEventListener('click', function(event) {
+        if (event.target.classList.contains('description-btn')) {
+            event.target.classList.add('more-splash')
+            showModal()
+        }
+    })
+
+    function showModal() {
+        overlay.style.display = 'block'
+        document.body.style.overflow = 'hidden'
+    }
+
+    function hideModal() {
+        overlay.style.display = 'none'
+        document.body.style.overflow = ''
+    }
+
+    more.addEventListener('click', function() {
+        this.classList.add('more-splash')
+        showModal()
+    })
+
+    close.addEventListener('click', function() {
+        more.classList.remove('more-splash')
+        tabsMore.forEach((el) => {
+            el.classList.remove('more-splash')
+        })
+        hideModal()
+    })
+
 })

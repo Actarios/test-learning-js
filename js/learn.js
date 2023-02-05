@@ -1,51 +1,22 @@
-//  let name = 'Ivan',
-//     age = 30,
-//     mail = 'ex@mail.ru'
+let inputRub = document.getElementById('rub')
+let inputEuro = document.getElementById('euro')
 
-// document.write(`Пользователю ${name} - ${age} лет и его почта ${mail}`)
+inputRub.addEventListener('input', () => {
 
-// function makeArray() {
-//     var items = []
+    let request = new XMLHttpRequest()
 
-//     for (var i = 0; i < 10; i++) {
-//         var item = function() {
-//             console.log(i)
-//         }
-//         items.push(item)
-//     }
+    request.open('GET', './js/current.json')
+    request.setRequestHeader('Content-type', 'application/json; charset=utf-8')
+    request.send()
 
-//     return items
-// }
+    request.addEventListener('readystatechange', () => {
+        if (request.readyState === 4 && request.status == 200) {
+            let data = JSON.parse(request.response)
 
-// var arr = makeArray()
+            inputEuro.value = inputRub.value / data.euro
+        } else {
+            inputEuro.value = 'Fucking error!'
+        }
+    })
 
-// arr[1]()
-// arr[3]()
-// arr[7]()
-
-// let fun = () => {
-//     console.log(this)
-// }
-
-// fun()
-
-// let obj = {
-//     number: 5,
-//     sayNumber: function() {
-//         let say = () => {
-//             console.log(this)
-//         }
-//         say()
-//     }
-// }
-
-// obj.sayNumber()
-
-let btn = document.querySelector('button')
-
-btn.addEventListener('click', function() {
-    let show = () => {
-        console.log(this)
-    }
-    show()
 })

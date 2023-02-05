@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(75, 75, 119);
+  /* background-color: rgb(75, 75, 119); */
 }
 
 .box {
@@ -7,6 +7,19 @@ body {
   width: 200px;
   overflow: scroll;
   box-sizing: border-box;
+}
+
+.learn_time {
+  background-color: #fff;
+  padding: 8px 12px;
+}
+
+.calc_time input {
+  width: 50px;
+}
+
+#culcTime {
+  margin-top: 12px;
 }
 
 /* Список заказов */

@@ -22,17 +22,34 @@
     Nulla nemo aliquam quae culpa, accusantium tenetur eveniet deserunt ad est harum laboriosam, eligendi nobis sint quas dignissimos. A nemo veritatis doloremque ut vel magni laudantium voluptates, non nobis reiciendis.</div>
     <button>Click</button>
 
-    <div id="result"></div>
+    <div class="learn_time">
+        <p>Общее время -
+            <span id="totalHours">43</span>
+            <span>часов</span>
+            <span id="totalMinutes">50</span>
+            <span>минут</span>
+        </p>
+        <p>Времени за прошедший день:</p>
+        <div class="calc_time">
+            <input type="text" value="0" id="calcHours">
+            <span>часов</span>
+            <input type="text" value="0" id="calcMinutes">
+            <span>минут</span>
+        </div>
+        <input type="button" value="Посчитать" id="culcTime">
+    </div>
 
-    <ul class="orders_list">
-        <li class="orders_list_num">12345</li>
-        <li class="orders_list_num">23456</li>
-        <li class="orders_list_num">34567</li>
-        <li class="orders_list_num">45678</li>
-    </ul>
+    <!-- <label for="rub">RUB</label>
+    <input type="text" id="rub">
+    <label for="usd">USD</label>
+    <input type="text" id="usd"> -->
 
-    <input id="age" value="30">
+    <label for="rub">RUB</label>
+    <input type="text" id="rub">
+    <label for="euro">EURO</label>
+    <input type="text" id="euro">
     
+    <script src="./js/time.js"></script>
     <script src="./js/learn.js"></script>
 </body>
 </html>
